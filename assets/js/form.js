@@ -13,7 +13,6 @@ teamCount.addEventListener("input", () => {
   generateFields()
   nextBtns = document.querySelectorAll("form .button-loca .next-btn"); 
   prevBtns = document.querySelectorAll("form .button-loca .previous-btn"); 
-  console.log(nextBtns)
   nextBtns.forEach((button) => {  
     button.addEventListener("click", (e) => {
      e.preventDefault();  
@@ -42,9 +41,9 @@ form.addEventListener("submit", (e) => {
     inputs.push({ name, value });  
   });  
   const formData = new FormData(form);
-  for (const data of formData.entries()) {
-    console.log('this is formData', data);
-  }
+  // for (const data of formData.entries()) {
+  //   console.log('this is formData', data);
+  // }
 
   let counter = 0;
   for (let i = 1; i <= teamCount; i++) {
@@ -115,7 +114,6 @@ form.addEventListener("submit", (e) => {
 
 function changeStep(btn) {
   const steps = Array.from(document.querySelectorAll("form .step"));  
-  console.log(steps, "ini steps") 
   let index = 0;  
   const active = document.querySelector(".active");  
   index = steps.indexOf(active);  
@@ -125,7 +123,6 @@ function changeStep(btn) {
   } else if (btn === "prev") {  
     index--;  
   }
-  console.log(steps[index])
   steps[index].classList.add("active");
   window.scrollTo(0, 0);
 }
@@ -798,22 +795,29 @@ function generateFields() {
       let buttonDiv = document.createElement("div");
       buttonDiv.classList.add("button-loca");
   
+      const previousBtn = document.createElement('button');
+      previousBtn.className = 'previous-btn';
+      previousBtn.style.backgroundColor = '#ffffff';
+      previousBtn.innerHTML = '<p style="color:#1b1b1b">Back</p>';
+
       const submitBtn = document.createElement('button');
       submitBtn.className = 'submit-btn';
       submitBtn.type = 'submit';
       submitBtn.value = 'submit';
       submitBtn.innerHTML = '<p style="color:#f1f1f1">Submit</p>';
   
+      buttonDiv.appendChild(previousBtn);
       buttonDiv.appendChild(submitBtn);
       stepDiv.appendChild(buttonDiv);
       container.appendChild(stepDiv);
     } else {
       let buttonDiv = document.createElement("div");
       buttonDiv.classList.add("button-loca");
+
       const previousBtn = document.createElement('button');
       previousBtn.className = 'previous-btn';
       previousBtn.style.backgroundColor = '#ffffff';
-      previousBtn.innerHTML = '<p style="color:#1b1b1b">Cancel</p>';
+      previousBtn.innerHTML = '<p style="color:#1b1b1b">Back</p>';
   
       const nextBtn = document.createElement('button');
       nextBtn.className = 'next-btn';
