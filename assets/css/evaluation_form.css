@@ -1,0 +1,218 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    background-color: #f1f1f1 !important;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0
+}
+
+.main,
+#main {
+    transition: margin-left .4s
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 22% 78%;
+    grid-template-areas: "left right";
+    min-height: 100vh;
+}
+
+.main {
+    grid-area: right;
+}
+
+nav {
+    z-index: 3;
+    width: 80%s;
+    height: 100%;
+    grid-area: left;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+    background-color: rgb(240, 240, 240);
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 50%;
+}
+
+.form-control input::-webkit-outer-spin-button,
+.form-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Styling form-control Radio
+button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+/* Styling Button */
+button {
+    background-color: #2980EF;
+    border: 1px solid #777;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 21px;
+    width: 20%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.button-loca{
+    margin: auto;
+    text-align: right;
+}
+
+button-bar {
+    padding: 8px 16px;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+}
+
+button-bar:hover {
+    background-color: #ccc;
+    color: #000
+}
+
+button p {
+  margin-bottom: 0.5rem !important;
+}
+
+td {
+    width: 10%;
+    font-size: small;
+    text-align: center;
+}
+
+th {
+    width: 30%;
+}
+
+sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    color: #000 !important;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+}
+
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+
+@media (max-width:992px) {
+    .wrapper {
+        display: initial;
+    }
+
+    nav {
+        width: 50%;
+        height: 100%;
+    }
+
+    .sidebar.collapse {
+        display: none;
+        position: absolute;
+        background-color: white;
+    }
+
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .hover-text-gray:hover {
+        color: #757575 !important
+    }
+
+    .overlay-effect {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        animation: opac 0.8s
+    }
+}
+
+@media (min-width:993px) {
+    table {
+      width: 70%;
+    }
+
+    .content {
+        max-width: 980px
+    }
+
+    .sidebar.collapse {
+        display: block !important;
+        background-color: #fff
+    }
+
+    .hide-large {
+        display: none !important
+    }
+}

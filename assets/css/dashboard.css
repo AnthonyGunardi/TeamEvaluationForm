@@ -1,0 +1,136 @@
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Raleway", sans-serif;
+    background-color:#f1f1f1!important;
+  }
+
+  hr{border:0;border-top:1px solid #eee;margin:20px 0}
+  .main,#main{transition:margin-left .4s}
+
+  button {
+    padding: 8px 16px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    cursor:pointer;
+    white-space:nowrap;
+    width:100%;
+    text-align:left
+  }
+  
+  button:hover {
+    background-color:#ccc;
+    color:#000
+  }
+  
+  container{
+    width:33.33333%;
+    padding:0 8px;
+    margin: 8px 0px;
+    float:left
+  }
+
+  container:hover{
+    opacity:0.60
+  }
+
+  box{
+    padding:0.01em 16px;
+    color:#000!important;
+    background-color:#fff!important
+  }
+  
+  sidebar{
+    height:100%;
+    width:200px;
+    background-color:#fff;
+    color:#000!important;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+  }
+
+  .wrapper{
+    display:grid;
+    grid-template-columns: 22% 78%;
+    grid-template-areas: "left right";
+    min-height: 100vh;
+  }
+
+  nav {
+    z-index:3;
+    width: 80%s;
+    height: 100%;
+    grid-area: left;
+  }
+
+  .main {
+    grid-area: right;
+  }
+
+  .box-content{
+    text-align:center;
+    padding:0.01em 16px;
+    color:#2980ef!important;
+    background-color:#fff!important
+  }
+
+  @media (max-width: 600px){
+    container{
+      width:100%;
+      padding:0 8px;
+      margin: 8px 0px;
+      float:left
+    }
+  }
+  
+  @media (max-width:992px){
+    .wrapper{
+      display:initial;
+    }
+    nav {
+      width: 50%;
+      height: 100%;
+    }
+    .sidebar.collapse{
+      display:none;
+      position: absolute;
+      background-color: white;
+    }
+    .main{
+      margin-left:0!important;
+      margin-right:0!important
+    }
+    .hover-text-gray:hover{color:#757575!important}
+    .overlay-effect{
+      position:fixed;
+      display:none;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background-color:rgba(0,0,0,0.5);
+      z-index:2;
+      animation:opac 0.8s
+    }
+  }
+  
+  @media (min-width:993px){
+    .content{max-width:980px}
+    .sidebar.collapse{
+      display:block!important;
+      background-color:#fff
+    }
+    .hide-large{display:none!important}
+  }

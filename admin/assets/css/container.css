@@ -1,0 +1,13 @@
+.container_2 {
+    background-color: white;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgb(0 0 0 / 50%);
+}
+
+.btn_container {
+    max-width:90%;
+    margin: 10px auto;
+    padding: 10px;
+}
